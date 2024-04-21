@@ -1,0 +1,32 @@
+﻿@model Department
+@{
+    ViewBag.Title = "Create Department";
+
+}
+
+
+    <form method="post">
+        <label>Department ID</label> 
+@*         <input type="text" name="Id" value="@Model?.Id" class="form-control-sm" />*@      
+        <input asp-for="Id" class="form-control-sm" />
+        <span asp-validation-for="Id" class="text-danger"></span>
+
+        <br />
+        
+        <label>Department Name</label> 
+@*         <input type="text" name="Name" value="@Model?.Name" class="form-control-sm" />*@
+        <input asp-for="Name" class="form-control-sm" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+
+        <br />
+
+        <input type="submit" value="Add" class="btn btn-primary" />
+    </form>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+    @* <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+ *@
+}
+

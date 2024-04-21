@@ -1,0 +1,16 @@
+﻿@model Student
+@{
+    ViewBag.Title = "Update Student";
+}
+
+
+    <form method="post">
+      
+        <partial name="createupdate" />
+
+        <input type="submit" value="Update" class="btn btn-outline-success"/>
+    
+    </form>
+
+<a asp-action="index" asp-asp-controller="student" class="btn btn-outline-info">Back</a>
+

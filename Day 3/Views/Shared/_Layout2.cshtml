@@ -1,0 +1,32 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+ 
+</head>
+<body>
+    <div>
+        <a asp-action="index" asp-controller="Student" class="btn btn-dark">Students</a>
+        <a asp-action="index" asp-controller="Department" class="btn btn-dark">Departments</a>
+        <a asp-action="index" asp-controller="Course" class="btn btn-dark">Courses</a>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    @RenderBody()
+
+    <div>
+        <h1 class=" alert alert-info"> Footer @DateTime.Now.ToString()</h1>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+﻿@model Student
+@{
+    ViewBag.Title = "Create Student";
+}
+
+
+    <form asp-action="create" asp-controller="student">
+       
+       @*  <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control-sm" />
+         <br />
+        <label asp-for="Age"></label>
+        <input asp-for="Age" class="form-control-sm" />
+        <br />
+        <label asp-for="DeptNo"></label>
+        <select asp-for="DeptNo" asp-items="deptSL">
+            @* @foreach(Department item in ViewBag.depts)
+            {
+                <option value="@item.Id">@item.Name</option>
+            }
+    </select>
+    *@
+        
+
+        <partial name="createupdate" />
+
+        <input type="submit" value="Add" class="btn btn-info"/>
+
+    </form>
+
+    <a asp-action="index" asp-asp-controller="student" class="btn btn-outline-info">Student List</a>
+
+@section Scripts {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+}
+
